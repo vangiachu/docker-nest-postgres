@@ -74,7 +74,7 @@ export class UserController {
         id: role_id,
       },
     });
-    return this.userService.findOne({ where: { id } });
+    return this.userService.findOne({ id });
   }
 
   @Delete(':id')
