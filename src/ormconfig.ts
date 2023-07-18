@@ -8,7 +8,7 @@ const config: PostgresConnectionOptions = {
   password: '123456',
   database: 'gia_admin_data',
   entities: [__dirname + '/**/*.entity{.ts, .js}'],
-  synchronize: false,
+  synchronize: true,
   migrations: [__dirname + '/migrations/**/*{.ts, .js}'],
 };
 

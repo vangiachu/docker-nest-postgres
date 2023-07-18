@@ -33,9 +33,9 @@ export abstract class AbstractService {
   }
 
   async findOne(condition, relations = []): Promise<any> {
-    return await this.repository.findOneBy({
+    return await this.repository.findOne({
       where: condition,
-      relations,
+      relations: relations,
     });
   }
 

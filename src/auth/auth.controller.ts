@@ -50,7 +50,7 @@ export class AuthController {
     @Body('password') password: string,
     @Res({ passthrough: true }) response: Response,
   ) {
-    const user = await this.userService.findOne({ where: { email } });
+    const user = await this.userService.findOne({ email });
 
     if (!user) {
       throw new NotFoundException('User not found');
@@ -71,7 +71,6 @@ export class AuthController {
   @Get('user')
   async user(@Req() request: Request) {
     const id = await this.authService.userId(request);
-    console.log(id);
     return this.userService.findOne({ id });
   }
 

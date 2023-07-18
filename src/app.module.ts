@@ -10,7 +10,7 @@ import ormconfig from './ormconfig';
 @Module({
   imports: [
     UserModule,
-    TypeOrmModule.forRoot(ormconfig),
+    TypeOrmModule.forRoot({ ...ormconfig, autoLoadEntities: true }),
     AuthModule,
     CommonModule,
     RoleModule,
