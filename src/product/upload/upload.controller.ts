@@ -31,7 +31,7 @@ export class UploadController {
   )
   uploadFile(@UploadedFile() file) {
     return {
-      url: `http://localhost:3000/api/${file.path}`,
+      url: `http://localhost:3001/api/${file.path}`,
     };
   }
 

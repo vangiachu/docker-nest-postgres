@@ -31,9 +31,6 @@ export class PermissionGuard implements CanActivate {
       'permissions',
     ]);
 
-    console.log(role);
-    console.log(role.permissions.some((p) => p.name === `edit_${access}`));
-
     if (request.method === 'GET') {
       return role.permissions.some(
         (p) => p.name === `view_${access}` || p.name === `edit_${access}`,
