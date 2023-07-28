@@ -4,11 +4,11 @@ const config: PostgresConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
   port: 5432,
-  username: 'postgres',
+  username: 'chugia',
   password: '123456',
-  database: 'gia_admin_data',
+  database: 'xoa_docker',
   entities: [__dirname + '/**/*.entity{.ts, .js}'],
-  synchronize: true,
+  synchronize: false,
   migrations: [__dirname + '/migrations/**/*{.ts, .js}'],
 };
 
